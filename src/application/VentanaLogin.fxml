@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="538.0" prefWidth="703.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <MediaView fx:id="mediaView" fitHeight="700.0" fitWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane layoutX="14.0" layoutY="57.0" prefHeight="425.0" prefWidth="336.0" style="-fx-background-color: #ffffff67; -fx-background-radius: 120px;">
+         <effect>
+            <DropShadow color="#404040" />
+         </effect>
+         <children>
+            <JFXTextField alignment="CENTER" focusColor="#f8070700" labelFloat="true" layoutX="80.0" layoutY="137.0" maxWidth="222.0" minWidth="184.0" prefHeight="43.0" prefWidth="222.0" promptText="USERNAME" style="-fx-border-radius: 50PX; -fx-border-color: #111;" unFocusColor="#11111100">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField alignment="CENTER" focusColor="#f8070700" labelFloat="true" layoutX="80.0" layoutY="198.0" maxWidth="222.0" minWidth="182.0" prefHeight="43.0" prefWidth="222.0" promptText="PASSWORD" style="-fx-border-radius: 50PX; -fx-border-color: #111;" unFocusColor="#11111100">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="29.0" layoutY="275.0" prefHeight="43.0" prefWidth="273.0" ripplerFill="#e1080800" style="-fx-background-color: #e10808; -fx-background-radius: 80px;" text="SIGNIN" textFill="WHITE" />
+            <JFXButton layoutX="67.0" layoutY="354.0" prefHeight="43.0" prefWidth="202.0" ripplerFill="#7c7c7c" style="-fx-background-radius: 50px;" text="FORGOT PASSWORD?" underline="true" />
+            <ImageView fitHeight="78.0" fitWidth="185.0" layoutX="98.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@LogoUEM.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="31.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cas-padlock-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="37.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img_51277.png" />
+               </image>
+            </ImageView>
+            <JFXCheckBox layoutX="63.0" layoutY="333.0" prefHeight="18.0" prefWidth="210.0" text="Remember my password" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
