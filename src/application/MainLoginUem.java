@@ -12,20 +12,30 @@ import javafx.scene.layout.AnchorPane;
 public class MainLoginUem extends Application {
 	
 	Stage stage;
+	FXMLLoader loader1, loader2;
+	Scene scene1, scene2;
 	
     @Override
-    public void start(Stage stage) throws Exception {
-    	this.stage=stage;
+    public void start(Stage primaryStage) throws Exception {
+    	stage=primaryStage;
+    	loader1 = new FXMLLoader(getClass().getResource("VentanaLogin.fxml"));
+    	loader2 = new FXMLLoader(getClass().getResource("inicioUEM.fxml"));
     	mainWindow();
     }
     public void mainWindow(){
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("VentanaLogin.fxml"));
-	        AnchorPane mypane;
-			mypane = loader.load();
+	    AnchorPane mypane1 = loader1.load();
+	    scene1 = new Scene(mypane1);
+	    
+	    AnchorPane mypane2 = loader2.load();
+		scene2 = new Scene(mypane2);
+		
+		Controller controller1 = loader1.getController();
+		controller1.inicio(stage, scene2);
+	    
+	    
         stage.setTitle("Blackboard");
-        Scene scene = new Scene(mypane);
-        stage.setScene(scene);
+        stage.setScene(scene1);
         stage.show();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
